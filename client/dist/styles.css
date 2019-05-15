@@ -1,8 +1,8 @@
 @font-face {
   font-family: 'Nexa';
   font-style: regular;
-  font-weight: bold;
-  src: url(NexaRegular.woff) format('woff');
+  font-weight: 400;
+  src: url(files/NexaRegular.woff) format('woff');
 }
 
 
@@ -51,10 +51,85 @@
 
 .dogcard-name {
   position: absolute;
-  left: 42%;
+  left: 38%;
   color: #6504B5;
-  font-size: 21px;
+  font-size: 20px;
+  font-weight: bolder;
   font-family: 'Nexa', Arial, Helvetica, sans-serif;
   bottom: 23px;
 }
 
+.dogcard-hover {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  background-color: white;
+  overflow: hidden;
+  height: 0;
+  transition: all .1s ease;
+  border-radius: 10px
+}
+
+.dogcard-outer:hover .dogcard-hover{
+  height: 100%;
+}
+
+.dogcard-image-round {
+  left: 16%;
+  top: 6%;
+  position: absolute;
+  display: block;
+  border-radius: 50%;
+  height: 53%;
+  width: 67%;
+  object-fit: cover;
+}
+
+.dogcard-info {
+  position: absolute;
+  bottom: 5%;
+  left: 28%;
+  text-align: center;
+  font-size: 13px;
+  color: black;
+  line-height: 22px;
+  font-family: 'Nexa', Arial, Helvetica, sans-serif;
+}
+
+.dogcard-info-name {
+  color: #6504B5;
+  font-size: 22px;
+}
+
+.dogcard-share {
+  border-radius: 100%;
+  box-shadow: 0px 0px 3px lightgray;
+  background-color: purple;
+  position: absolute;
+  height: 35px;
+  width: 35px;
+  top: 20px;
+  right: 45px;
+}
+
+.dogcard-info2 {
+  position: absolute;
+  bottom: 15%;
+  left: 20%;
+  text-align: center;
+  font-size: 13px;
+  color: black;
+  line-height: 22px;
+  font-family: 'Nexa', Arial, Helvetica, sans-serif;
+}
+
+.dogcard-info-share {
+  position: absolute;
+  text-align: center;
+  bottom: 28px;
+  font-size: 22px;
+  left: 20px;
+  color: #6504B5;
+  line-height: 22px;
+  font-family: 'Nexa', Arial, Helvetica, sans-serif;
+}
