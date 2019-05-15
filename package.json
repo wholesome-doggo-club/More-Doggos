@@ -8,7 +8,6 @@
     "node": ">=6.13.0"
   },
   "scripts": {
-<<<<<<< HEAD
     "start": "nodemon ./server/index.js",
     "build": "webpack -d --watch"
   },
@@ -28,12 +27,5 @@
     "webpack": "^2.2.1",
     "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor",
     "webpack-cli": "^3.3.2"
-=======
-  },
-  "dependencies": {
-  },
-  "devDependencies": {
-    "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor"
->>>>>>> 50308bf5d9564933c7ed78a388470c8693b4040d
   }
 }

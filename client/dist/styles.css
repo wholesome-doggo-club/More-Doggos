@@ -1,4 +1,60 @@
-.doglink {
-    border: 3px;
-    border-style: solid;
+@font-face {
+  font-family: 'Nexa';
+  font-style: regular;
+  font-weight: bold;
+  src: url(NexaRegular.woff) format('woff');
 }
+
+
+.dogcard-outer {
+  position: relative;
+  /* border: 1px;
+  border-style: solid; */
+  box-shadow: 2px 2px 5px lightgray;
+  height: 300px;
+  width: 236px;
+  margin-top: 100px;
+  /* padding-top: 20px;
+  padding-left: 20px; */
+  border-radius: 10px
+}
+
+.dogcard-top {
+  position: absolute;
+  /* border: 1px;
+  border-style: solid;
+  border-color: blue; */
+  top: 0;
+  height: 78%;
+  width: 100%;
+}
+
+.dogcard-image {
+  position: absolute;
+  display: block;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.dogcard-filler {
+  position: absolute;
+  content: "";
+  height: 12px;
+  width: 100%;
+  border-radius: 50% 50% 0 0;
+  background-color: white;
+  bottom: 0;
+}
+
+.dogcard-name {
+  position: absolute;
+  left: 42%;
+  color: #6504B5;
+  font-size: 21px;
+  font-family: 'Nexa', Arial, Helvetica, sans-serif;
+  bottom: 23px;
+}
+
