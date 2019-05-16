@@ -43,27 +43,24 @@ class DogCard extends React.Component {
             </div>
             <div className="dogcard-name">BILLY</div>
           </div>
-          {!this.state.shareClick &&
-            <div className="dogcard-hover">
-              <div>
-                <img src="https://plannthat.com/wp-content/uploads/2017/06/DSC_0438.jpg" className="dogcard-image-round"></img>
-                {!this.state.shareHover &&
-                  <img src="./files/shareDefault.jpg" className="dogcard-share" onMouseOver={this.handleShareHover}></img>}
+          <div className="dogcard-hover">
+            <div>
+              <img src="https://plannthat.com/wp-content/uploads/2017/06/DSC_0438.jpg" className="dogcard-image-round"></img>
+              {!this.state.shareHover &&
+                <img src="./files/shareDefault.jpg" className="dogcard-share" onMouseOver={this.handleShareHover}></img>}
 
-                {this.state.shareHover &&
-                  <img src="./files/shareHover.jpg" className="dogcard-share" onMouseLeave={this.handleShareHover} onClick={this.handleShareClick}></img>}
-              </div>
-              {!this.state.shareClick &&
-                <div className="dogcard-info">
-                  <div className="dogcard-info-name">Billy</div>
-                  <div className="dogcard-info-extra">Doggo Terrier</div>
-                  <div>Young | Male</div>
-                  <div>Los Angelos, CA</div>
-                </div>
-              }
+              {this.state.shareHover &&
+                <img src="./files/shareHover.jpg" className="dogcard-share" onMouseLeave={this.handleShareHover} onClick={this.handleShareClick}></img>}
             </div>
-          }
-
+            {!this.state.shareClick &&
+              <div className="dogcard-info">
+                <div className="dogcard-info-name">Billy</div>
+                <div className="dogcard-info-extra">Doggo Terrier</div>
+                <div>Young | Male</div>
+                <div>Los Angelos, CA</div>
+              </div>
+            }
+          </div>
           {this.state.shareClick &&
             <div className="dogcard-hover-share">
               <div>
@@ -71,7 +68,7 @@ class DogCard extends React.Component {
                 {!this.state.shareHover &&
                   <img src="./files/shareClose.png" className="dogcard-share" onMouseOver={this.handleShareHover}></img>}
                 {this.state.shareHover &&
-                  <img src="./files/shareCloseHover.png" className="dogcard-share" onClick={this.handleShareClick}></img>}
+                  <img src="./files/shareCloseHover.png" className="dogcard-share" onMouseLeave={this.handleShareHover} onClick={this.handleShareClick}></img>}
               </div>
               <div className="dogcard-info2">
                 <div className="dogcard-info-share">Share Billy</div>

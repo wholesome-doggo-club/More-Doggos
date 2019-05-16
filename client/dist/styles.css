@@ -16,8 +16,7 @@
   margin-top: 100px;
   /* padding-top: 20px;
   padding-left: 20px; */
-  border-radius: 10px;
-  overflow: hidden;
+  border-radius: 10px
 }
 
 .dogcard-top {
@@ -175,12 +174,11 @@
 
 #fill.start {
   opacity: 100;
-  background-clip: content-box;
   z-index: 2;
-  -webkit-transform: scale(19);
-  -moz-transform: scale(19);
-  -o-transform: scale(19);
-  -ms-transform: scale(19);
-  transform: scale(19);
-  overflow: auto;
+  overflow: hidden;
+  -webkit-transform: scale(20);
+  -moz-transform: scale(20);
+  -o-transform: scale(20);
+  -ms-transform: scale(20);
+  transform: scale(20);
 }
