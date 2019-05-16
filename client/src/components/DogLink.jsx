@@ -75,7 +75,18 @@ class DogCard extends React.Component {
               </div>
               <div className="dogcard-info2">
                 <div className="dogcard-info-share">Share Billy</div>
-                <div className="dogcard-share-buttons">Ya -- Ba -- Da -- doop</div>
+                <div className="dogcard-share-button-container">
+                <div className="dogcard-share-button" id="dogcard-share-facebook"><div className="overlay"></div></div>
+                <div className="dogcard-share-button" id="dogcard-share-twitter"><div className="overlay"></div></div>
+                <div className="dogcard-share-button" id="dogcard-share-pinterest"><div className="overlay"></div></div>
+                <div className="dogcard-share-button" id="dogcard-share-email"><div className="overlay"></div></div>
+                <div className="dogcard-share-button" id="dogcard-share-link"><div className="overlay"></div></div>
+                  {/* <img className="dogcard-share-button" src="./files/facebook.png"></img>
+                  <img className="dogcard-share-button" src="./files/twitter.png"></img>
+                  <img className="dogcard-share-button" src="./files/pinterest.png"></img>
+                  <img className="dogcard-share-button" src="./files/email.png"></img>
+                  <img className="dogcard-share-button" src="./files/link.png"></img> */}
+                </div>
               </div>
             </div>
           }

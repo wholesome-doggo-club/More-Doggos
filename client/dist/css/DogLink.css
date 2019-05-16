@@ -52,9 +52,9 @@
 
 .dogcard-name {
   position: absolute;
-  left: 38%;
+  left: 40%;
   color: #6504B5;
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 500;
   font-family: 'Nexa', Arial, Helvetica, sans-serif;
   bottom: 23px;
@@ -132,9 +132,10 @@
   text-align: center;
   bottom: 28px;
   font-size: 22px;
-  left: 20px;
+  left: 18px;
   color: white;
   line-height: 22px;
+  padding-top: 10px;
   font-family: 'Nexa', Arial, Helvetica, sans-serif;
 }
 
@@ -183,4 +184,45 @@
   -ms-transform: scale(19);
   transform: scale(19);
   overflow: auto;
+}
+
+.dogcard-share-button-container {
+  display: table-row;
+}
+
+.dogcard-share-button {
+  float: left;
+  background-size:contain;
+  height: 20px;
+  width: 20px;
+  border: 2px;
+  border-style: solid;
+  border-radius: 100%;
+  margin-right: 6px;
+  border-color: white;
+}
+
+.dogcard-share-button:hover > .overlay {
+  width:20px;
+  height:20px;
+  position:absolute;
+  background-color:#000;
+  opacity:0.5;
+  border-radius: 100%;
+}
+
+#dogcard-share-facebook {
+  background-image: url('../files/facebook.png');
+}
+#dogcard-share-twitter {
+  background-image: url('../files/twitter.png');
+}
+#dogcard-share-pinterest {
+  background-image: url('../files/pinterest.png');
+}
+#dogcard-share-email {
+  background-image: url('../files/email.png');
+}
+#dogcard-share-link {
+  background-image: url('../files/link.png');
 }
