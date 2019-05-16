@@ -168,14 +168,20 @@
   opacity: 100;
   z-index: 2;
 <<<<<<< HEAD
+<<<<<<< HEAD
   transform: scale(19);
 =======
+=======
+>>>>>>> parent of 600f808... Single Doggo component complete
   overflow: hidden;
   -webkit-transform: scale(20);
   -moz-transform: scale(20);
   -o-transform: scale(20);
   -ms-transform: scale(20);
   transform: scale(20);
+<<<<<<< HEAD
+>>>>>>> parent of 600f808... Single Doggo component complete
+=======
 >>>>>>> parent of 600f808... Single Doggo component complete
 }
 

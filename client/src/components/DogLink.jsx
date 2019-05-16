@@ -1,6 +1,5 @@
 import React from 'react';
 import $ from 'jquery';
-import styles from '../styles/DogLink.css';
 
 class DogCard extends React.Component {
   constructor(props) {
@@ -35,76 +34,48 @@ class DogCard extends React.Component {
   render() {
     return (
       <div>
-        <div className={styles.dogcard-outer}>
-          <div id="fill" className={this.state.shareClick ? styles.start : 'end'}></div>
+        <div className="dogcard-outer">
+          <div id="fill" className={this.state.shareClick ? 'start' : 'end'}></div>
           <div>
-            <div className={styles.dogcard-top}>
-              <img src="https://plannthat.com/wp-content/uploads/2017/06/DSC_0438.jpg" className={styles.dogcard-image}></img>
-              <div className={styles.dogcard-filler}></div>
+            <div className="dogcard-top">
+              <img src="https://plannthat.com/wp-content/uploads/2017/06/DSC_0438.jpg" className="dogcard-image"></img>
+              <div className="dogcard-filler"></div>
             </div>
-            <div className={styles.dogcard-name}>BILLY</div>
+            <div className="dogcard-name">BILLY</div>
           </div>
-<<<<<<< HEAD
           {!this.state.shareClick &&
-            <div className={styles.dogcard-hover}>
+            <div className="dogcard-hover">
               <div>
-                <img src="https://plannthat.com/wp-content/uploads/2017/06/DSC_0438.jpg" className={styles.dogcard-image-round}></img>
+                <img src="https://plannthat.com/wp-content/uploads/2017/06/DSC_0438.jpg" className="dogcard-image-round"></img>
                 {!this.state.shareHover &&
-                  <img src="./files/shareDefault.jpg" className={styles.dogcard-share} onMouseOver={this.handleShareHover}></img>}
+                  <img src="./files/shareDefault.jpg" className="dogcard-share" onMouseOver={this.handleShareHover}></img>}
 
                 {this.state.shareHover &&
-                  <img src="./files/shareHover.jpg" className={styles.dogcard-share} onMouseLeave={this.handleShareHover} onClick={this.handleShareClick}></img>}
+                  <img src="./files/shareHover.jpg" className="dogcard-share" onMouseLeave={this.handleShareHover} onClick={this.handleShareClick}></img>}
               </div>
               {!this.state.shareClick &&
-                <div className={styles.dogcard-info}>
-                  <div className={styles.dogcard-info-name}>Billy</div>
-                  <div className={styles.dogcard-info-extra}>Doggo Terrier</div>
+                <div className="dogcard-info">
+                  <div className="dogcard-info-name">Billy</div>
+                  <div className="dogcard-info-extra">Doggo Terrier</div>
                   <div>Young | Male</div>
                   <div>Los Angelos, CA</div>
                 </div>
               }
-=======
-          <div className="dogcard-hover">
-            <div>
-              <img src="https://plannthat.com/wp-content/uploads/2017/06/DSC_0438.jpg" className="dogcard-image-round"></img>
-              {!this.state.shareHover &&
-                <img src="./files/shareDefault.jpg" className="dogcard-share" onMouseOver={this.handleShareHover}></img>}
-
-              {this.state.shareHover &&
-                <img src="./files/shareHover.jpg" className="dogcard-share" onMouseLeave={this.handleShareHover} onClick={this.handleShareClick}></img>}
->>>>>>> parent of 600f808... Single Doggo component complete
             </div>
-            {!this.state.shareClick &&
-              <div className="dogcard-info">
-                <div className="dogcard-info-name">Billy</div>
-                <div className="dogcard-info-extra">Doggo Terrier</div>
-                <div>Young | Male</div>
-                <div>Los Angelos, CA</div>
-              </div>
-            }
-          </div>
+          }
+
           {this.state.shareClick &&
-            <div className={styles.dogcard-hover-share}>
+            <div className="dogcard-hover-share">
               <div>
-                <img src="https://plannthat.com/wp-content/uploads/2017/06/DSC_0438.jpg" className={styles.dogcard-image-round}></img>
+                <img src="https://plannthat.com/wp-content/uploads/2017/06/DSC_0438.jpg" className="dogcard-image-round"></img>
                 {!this.state.shareHover &&
-                  <img src="./files/shareClose.png" className={styles.dogcard-share} onMouseOver={this.handleShareHover}></img>}
+                  <img src="./files/shareClose.png" className="dogcard-share" onMouseOver={this.handleShareHover}></img>}
                 {this.state.shareHover &&
-<<<<<<< HEAD
-                  <img src="./files/shareCloseHover.png" className={styles.dogcard-share} onClick={this.handleShareClick}></img>}
-=======
-                  <img src="./files/shareCloseHover.png" className="dogcard-share" onMouseLeave={this.handleShareHover} onClick={this.handleShareClick}></img>}
->>>>>>> parent of 600f808... Single Doggo component complete
+                  <img src="./files/shareCloseHover.png" className="dogcard-share" onClick={this.handleShareClick}></img>}
               </div>
-              <div className={styles.dogcard-info2}>
-                <div className={styles.dogcard-info-share}>Share Billy</div>
-                <div className={styles.dogcard-share-buttons}>
-                  <img className={styles.dogcard-sharing} src="./files/fb.png"></img>
-                  <img className={styles.dogcard-sharing} src="./files/twitter.png"></img>
-                  <img className={styles.dogcard-sharing} src="./files/pin.png"></img>
-                  <img className={styles.dogcard-sharing} src="./files/mail.png"></img>
-                  <img className={styles.dogcard-sharing} src="./files/link.png"></img>
-                </div>
+              <div className="dogcard-info2">
+                <div className="dogcard-info-share">Share Billy</div>
+                <div className="dogcard-share-buttons">Ya -- Ba -- Da -- doop</div>
               </div>
             </div>
           }
