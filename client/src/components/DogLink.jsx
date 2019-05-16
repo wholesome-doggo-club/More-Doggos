@@ -1,4 +1,5 @@
 import React from 'react';
+import $ from 'jquery';
 
 class DogCard extends React.Component {
   constructor(props) {
@@ -11,7 +12,8 @@ class DogCard extends React.Component {
     this.handleShareClick = this.handleShareClick.bind(this);
   }
 
-  handleShareHover() {
+  handleShareHover(e) {
+    e.preventDefault();
     if (this.state.shareHover === false) {
       this.setState({ shareHover: true });
     } else {
@@ -19,9 +21,10 @@ class DogCard extends React.Component {
     }
   }
 
-  handleShareClick() {
+  handleShareClick(e) {
+    e.preventDefault();
     if (this.state.shareClick === false) {
-      this.setState({ shareClick: true })
+      this.setState({ shareClick: true, shareHover: true })
     } else {
       this.setState({ shareClick: false })
     }
@@ -32,6 +35,7 @@ class DogCard extends React.Component {
     return (
       <div>
         <div className="dogcard-outer">
+          <div id="fill" className={this.state.shareClick ? 'start' : 'end'}></div>
           <div>
             <div className="dogcard-top">
               <img src="https://plannthat.com/wp-content/uploads/2017/06/DSC_0438.jpg" className="dogcard-image"></img>
@@ -43,7 +47,7 @@ class DogCard extends React.Component {
             <div>
               <img src="https://plannthat.com/wp-content/uploads/2017/06/DSC_0438.jpg" className="dogcard-image-round"></img>
               {!this.state.shareHover &&
-                <img src="./files/shareDefault.jpg" className="dogcard-share" onMouseEnter={this.handleShareHover}></img>}
+                <img src="./files/shareDefault.jpg" className="dogcard-share" onMouseOver={this.handleShareHover}></img>}
 
               {this.state.shareHover &&
                 <img src="./files/shareHover.jpg" className="dogcard-share" onMouseLeave={this.handleShareHover} onClick={this.handleShareClick}></img>}
@@ -56,14 +60,23 @@ class DogCard extends React.Component {
                 <div>Los Angelos, CA</div>
               </div>
             }
-            {this.state.shareClick &&
+          </div>
+          {this.state.shareClick &&
+            <div className="dogcard-hover-share">
+              <div>
+                <img src="https://plannthat.com/wp-content/uploads/2017/06/DSC_0438.jpg" className="dogcard-image-round"></img>
+                {!this.state.shareHover &&
+                  <img src="./files/shareClose.png" className="dogcard-share" onMouseOver={this.handleShareHover}></img>}
+                {this.state.shareHover &&
+                  <img src="./files/shareCloseHover.png" className="dogcard-share" onMouseLeave={this.handleShareHover} onClick={this.handleShareClick}></img>}
+              </div>
               <div className="dogcard-info2">
                 <div className="dogcard-info-share">Share Billy</div>
                 <div className="dogcard-share-buttons">Ya -- Ba -- Da -- doop</div>
               </div>
-            }
-          </div>
-          
+            </div>
+          }
+
         </div>
       </div>
     )
