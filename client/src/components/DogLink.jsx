@@ -1,5 +1,5 @@
 import React from 'react';
-import $ from 'jquery';
+
 
 class DogCard extends React.Component {
   constructor(props) {
@@ -71,7 +71,7 @@ class DogCard extends React.Component {
                 {!this.state.shareHover &&
                   <img src="./files/shareClose.png" className="dogcard-share" onMouseOver={this.handleShareHover}></img>}
                 {this.state.shareHover &&
-                  <img src="./files/shareCloseHover.png" className="dogcard-share" onClick={this.handleShareClick}></img>}
+                  <img src="./files/shareCloseHover.png" className="dogcard-share" onClick={this.handleShareClick} onMouseLeave={this.handleShareHover}></img>}
               </div>
               <div className="dogcard-info2">
                 <div className="dogcard-info-share">Share Billy</div>
@@ -81,11 +81,6 @@ class DogCard extends React.Component {
                 <div className="dogcard-share-button" id="dogcard-share-pinterest"><div className="overlay"></div></div>
                 <div className="dogcard-share-button" id="dogcard-share-email"><div className="overlay"></div></div>
                 <div className="dogcard-share-button" id="dogcard-share-link"><div className="overlay"></div></div>
-                  {/* <img className="dogcard-share-button" src="./files/facebook.png"></img>
-                  <img className="dogcard-share-button" src="./files/twitter.png"></img>
-                  <img className="dogcard-share-button" src="./files/pinterest.png"></img>
-                  <img className="dogcard-share-button" src="./files/email.png"></img>
-                  <img className="dogcard-share-button" src="./files/link.png"></img> */}
                 </div>
               </div>
             </div>

@@ -8,8 +8,6 @@
 
 .dogcard-outer {
   position: relative;
-  /* border: 1px;
-  border-style: solid; */
   box-shadow: 2px 2px 5px lightgray;
   height: 300px;
   width: 236px;
@@ -147,9 +145,7 @@
   overflow: hidden;
   height: 100%;
   border-radius: 10px;
-  
 }
-
 
 #fill {
   position: absolute;

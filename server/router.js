@@ -1,10 +1,8 @@
 const router = require('express').Router();
 const path = require('path');
+const controller = require('./controller.js')
 
-router
-  .route('/NexaRegular.woff', (req, res) => {
-    const filepath = path.join(__dirname + '/fonts/NexaRegular.woff');
-    res.sendFile(filepath);
-  })
+router.route('/')
+  .get(controller.get)  
   
 module.exports = router;
