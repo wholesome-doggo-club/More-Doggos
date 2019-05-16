@@ -44,6 +44,7 @@ class DogCard extends React.Component {
             </div>
             <div className={styles.dogcard-name}>BILLY</div>
           </div>
+<<<<<<< HEAD
           {!this.state.shareClick &&
             <div className={styles.dogcard-hover}>
               <div>
@@ -62,9 +63,26 @@ class DogCard extends React.Component {
                   <div>Los Angelos, CA</div>
                 </div>
               }
-            </div>
-          }
+=======
+          <div className="dogcard-hover">
+            <div>
+              <img src="https://plannthat.com/wp-content/uploads/2017/06/DSC_0438.jpg" className="dogcard-image-round"></img>
+              {!this.state.shareHover &&
+                <img src="./files/shareDefault.jpg" className="dogcard-share" onMouseOver={this.handleShareHover}></img>}
 
+              {this.state.shareHover &&
+                <img src="./files/shareHover.jpg" className="dogcard-share" onMouseLeave={this.handleShareHover} onClick={this.handleShareClick}></img>}
+>>>>>>> parent of 600f808... Single Doggo component complete
+            </div>
+            {!this.state.shareClick &&
+              <div className="dogcard-info">
+                <div className="dogcard-info-name">Billy</div>
+                <div className="dogcard-info-extra">Doggo Terrier</div>
+                <div>Young | Male</div>
+                <div>Los Angelos, CA</div>
+              </div>
+            }
+          </div>
           {this.state.shareClick &&
             <div className={styles.dogcard-hover-share}>
               <div>
@@ -72,7 +90,11 @@ class DogCard extends React.Component {
                 {!this.state.shareHover &&
                   <img src="./files/shareClose.png" className={styles.dogcard-share} onMouseOver={this.handleShareHover}></img>}
                 {this.state.shareHover &&
+<<<<<<< HEAD
                   <img src="./files/shareCloseHover.png" className={styles.dogcard-share} onClick={this.handleShareClick}></img>}
+=======
+                  <img src="./files/shareCloseHover.png" className="dogcard-share" onMouseLeave={this.handleShareHover} onClick={this.handleShareClick}></img>}
+>>>>>>> parent of 600f808... Single Doggo component complete
               </div>
               <div className={styles.dogcard-info2}>
                 <div className={styles.dogcard-info-share}>Share Billy</div>
