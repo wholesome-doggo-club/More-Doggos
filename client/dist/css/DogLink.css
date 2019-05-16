@@ -2,7 +2,7 @@
   font-family: 'Nexa';
   font-style: regular;
   font-weight: 400;
-  src: url(files/NexaRegular.woff) format('woff');
+  src: url(fonts/NexaRegular.woff) format('woff');
 }
 
 
@@ -55,7 +55,7 @@
   left: 38%;
   color: #6504B5;
   font-size: 20px;
-  font-weight: bolder;
+  font-weight: 500;
   font-family: 'Nexa', Arial, Helvetica, sans-serif;
   bottom: 23px;
 }

@@ -41,7 +41,7 @@ class DogCard extends React.Component {
               <img src="https://plannthat.com/wp-content/uploads/2017/06/DSC_0438.jpg" className="dogcard-image"></img>
               <div className="dogcard-filler"></div>
             </div>
-            <div className="dogcard-name">BILLY</div>
+            <div className="dogcard-name">Billy</div>
           </div>
           {!this.state.shareClick &&
             <div className="dogcard-hover">
