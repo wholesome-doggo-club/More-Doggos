@@ -5,15 +5,19 @@
   src: url(fonts/NexaRegular.woff) format('woff');
 }
 
+.dogcard-container {
+  text-align: center;
+}
 
 .dogcard-outer {
+  display: inline-flex;
   position: relative;
   box-shadow: 2px 2px 5px lightgray;
   height: 300px;
   width: 236px;
   margin-top: 100px;
-  /* padding-top: 20px;
-  padding-left: 20px; */
+  margin-top: 20px;
+  margin-left: 20px;
   border-radius: 10px;
   overflow: hidden;
 }
@@ -50,7 +54,8 @@
 
 .dogcard-name {
   position: absolute;
-  left: 40%;
+  width: 100%;
+  text-align: center;
   color: #6504B5;
   font-size: 22px;
   font-weight: 500;
@@ -88,7 +93,7 @@
 .dogcard-info {
   position: absolute;
   bottom: 5%;
-  left: 28%;
+  width: 100%;
   text-align: center;
   font-size: 13px;
   color: black;
@@ -130,7 +135,7 @@
   text-align: center;
   bottom: 28px;
   font-size: 22px;
-  left: 18px;
+  width: 100%;
   color: white;
   line-height: 22px;
   padding-top: 10px;

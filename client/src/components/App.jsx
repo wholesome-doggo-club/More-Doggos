@@ -1,5 +1,6 @@
 import React from 'react';
 import DogCard from './DogLink.jsx';
+import Doggoverflow from './Doggoverflow.jsx';
 import $ from 'jquery';
 
 class App extends React.Component {
@@ -23,7 +24,7 @@ class App extends React.Component {
         {this.state.doggos.map((doggo) => {
           return <DogCard doggo={doggo}/>
         })}
-        
+        <Doggoverflow />
       </div>
     )
   }

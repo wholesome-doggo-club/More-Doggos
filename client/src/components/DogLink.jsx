@@ -33,20 +33,19 @@ class DogCard extends React.Component {
 
   render() {
     return (
-      <div>
         <div className="dogcard-outer">
           <div id="fill" className={this.state.shareClick ? 'start' : 'end'}></div>
           <div>
             <div className="dogcard-top">
-              <img src="https://plannthat.com/wp-content/uploads/2017/06/DSC_0438.jpg" className="dogcard-image"></img>
+              <img src={this.props.doggo.image} className="dogcard-image"></img>
               <div className="dogcard-filler"></div>
             </div>
-            <div className="dogcard-name">Billy</div>
+            <div className="dogcard-name">{this.props.doggo.name}</div>
           </div>
           {!this.state.shareClick &&
             <div className="dogcard-hover">
               <div>
-                <img src="https://plannthat.com/wp-content/uploads/2017/06/DSC_0438.jpg" className="dogcard-image-round"></img>
+                <img src={this.props.doggo.image} className="dogcard-image-round"></img>
                 {!this.state.shareHover &&
                   <img src="./files/shareDefault.jpg" className="dogcard-share" onMouseOver={this.handleShareHover}></img>}
 
@@ -55,10 +54,10 @@ class DogCard extends React.Component {
               </div>
               {!this.state.shareClick &&
                 <div className="dogcard-info">
-                  <div className="dogcard-info-name">Billy</div>
-                  <div className="dogcard-info-extra">Doggo Terrier</div>
-                  <div>Young | Male</div>
-                  <div>Los Angelos, CA</div>
+                  <div className="dogcard-info-name">{this.props.doggo.name}</div>
+                  <div className="dogcard-info-extra">{this.props.doggo.breed}</div>
+                  <div>{this.props.doggo.age} | {this.props.doggo.gender}</div>
+                  <div>{this.props.doggo.location}</div>
                 </div>
               }
             </div>
@@ -67,14 +66,14 @@ class DogCard extends React.Component {
           {this.state.shareClick &&
             <div className="dogcard-hover-share">
               <div>
-                <img src="https://plannthat.com/wp-content/uploads/2017/06/DSC_0438.jpg" className="dogcard-image-round"></img>
+                <img src={this.props.doggo.image} className="dogcard-image-round"></img>
                 {!this.state.shareHover &&
                   <img src="./files/shareClose.png" className="dogcard-share" onMouseOver={this.handleShareHover}></img>}
                 {this.state.shareHover &&
                   <img src="./files/shareCloseHover.png" className="dogcard-share" onClick={this.handleShareClick} onMouseLeave={this.handleShareHover}></img>}
               </div>
               <div className="dogcard-info2">
-                <div className="dogcard-info-share">Share Billy</div>
+                <div className="dogcard-info-share">Share {this.props.doggo.name}</div>
                 <div className="dogcard-share-button-container">
                 <div className="dogcard-share-button" id="dogcard-share-facebook"><div className="overlay"></div></div>
                 <div className="dogcard-share-button" id="dogcard-share-twitter"><div className="overlay"></div></div>
@@ -87,7 +86,6 @@ class DogCard extends React.Component {
           }
 
         </div>
-      </div>
     )
   }
 }
