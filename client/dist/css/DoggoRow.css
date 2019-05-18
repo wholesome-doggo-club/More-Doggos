@@ -1,0 +1,21 @@
+.doggorow-outer {
+    display: inline-block;
+    text-align: center;
+    width: 85%;
+    height: 30vw;
+    min-height: 286px;
+    max-height: 383px;
+    /* border: 5px solid red; */
+}
+
+@media screen and (max-width:1000px) {
+    .doggorow-outer {
+        border: 5px solid red;
+    }
+}
+
+.filler {
+    width: 100%;
+    height: 100px;
+
+}

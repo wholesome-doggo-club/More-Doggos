@@ -10,7 +10,7 @@ function getRandomInt(min, max) {
 const generateDoggos = () => {
   let names = [];
   let ages = ['Pupper', 'Youngin', 'Doggo', 'Oldoggo']
-  let genders = ['male', 'female', 'genderfluid', 'transgender', 'intersex'];
+  let genders = ['male', 'female', 'genderfluid', 'transgender', 'intersex','male', 'female', 'male', 'female', 'male', 'female',];
   let location = 'Los Angeles, CA'
   request({ url: 'https://uinames.com/api/?region=england&amount=100' }, (err, res, body) => {
     if (err) console.log(err); else {
@@ -26,7 +26,7 @@ const generateDoggos = () => {
             doggo.name = names[i];
             doggo.breed = parsed[i].breeds[0].name;
             doggo.age = ages[getRandomInt(0, 3)];
-            doggo.gender = genders[getRandomInt(0, 4)];
+            doggo.gender = genders[getRandomInt(0, 10)];
             doggo.location = location;
             doggo.image = parsed[i].url;
             db.save(doggo);
@@ -36,3 +36,5 @@ const generateDoggos = () => {
     }
   })
 }
+
+generateDoggos();
