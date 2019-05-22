@@ -1,5 +1,5 @@
 import React from 'react';
-import DoggoRow from './DoggoRow.jsx';
+import DoggoRow from './DoggoRowStatic.jsx';
 import DogCard from './DogLink.jsx';
 import Doggoverflow from './Doggoverflow.jsx';
 import $ from 'jquery';
@@ -36,15 +36,17 @@ class App extends React.Component {
 
   render(props) {
     return (
-      <div className="dogcard-container">
-        <DoggoRow height={this.state.height} width={this.state.width} doggos={this.state.doggos.slice(0, Math.floor((.8 * this.state.width)/ 310))}/>
-        <div className="filler"></div>
-        <DoggoRow height={this.state.height} width={this.state.width} doggos={this.state.doggos.slice(Math.floor((.8 * this.state.width)/ 310), 2 * Math.floor((.8 * this.state.width)/ 310))}/>
-        {/* {this.state.doggos.map((doggo) => {
-          return <DogCard doggo={doggo} />
-        })} */}
-
-        <Doggoverflow />
+      <div>
+        <div className="title-thing-TEMP">More Doggos from the Wholesome Doggo Club</div>
+        <div className="dogcard-container">
+          <DoggoRow height={this.state.height} width={this.state.width} doggos={this.state.doggos.slice(0, Math.floor((this.state.width) / 298))} />
+          <div className="filler"></div>
+        </div>
+        <div className="title-thing-TEMP">Dogs available for adoption near you</div>
+        <div className="dogcard-container">
+          <DoggoRow height={this.state.height} width={this.state.width} doggos={this.state.doggos.slice(Math.floor((this.state.width) / 298), 2 * Math.floor((this.state.width) / 298))} />
+          <div className="filler"></div>
+        </div>
       </div>
     )
   }
