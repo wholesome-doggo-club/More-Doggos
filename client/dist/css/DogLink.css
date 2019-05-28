@@ -30,11 +30,13 @@
   border-radius: 10px;
   overflow: hidden;
   flex-grow: 0;
+  cursor: pointer;
 }
 
 .dogcard-under {
   height: 100%;
   width: 100%;
+  background-color: white;
 }
 
 .dogcard-top {
@@ -114,10 +116,12 @@
   color: black;
   line-height: 22px;
   font-family: 'Nexa', Arial, Helvetica, sans-serif;
+  background-color: white;
 }
 
 .dogcard-info-name {
   color: #6504B5;
+  background-color: white;
   font-size: 22px;
 }
 

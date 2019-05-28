@@ -1,7 +1,11 @@
 import React from 'react';
+import BottomBar from './BottomBar.jsx';
 import DoggoRow from './DoggoRowStatic.jsx';
-import DogCard from './DogLink.jsx';
-import Doggoverflow from './Doggoverflow.jsx';
+import DoggoAdvice from './DoggoAdvice.jsx';
+import AskAbout from './AskAbout.jsx';
+import DoggoInfo from './DoggoInfo.jsx';
+// import DogCard from './DogLink.jsx';
+// import Doggoverflow from './Doggoverflow.jsx';
 import $ from 'jquery';
 
 class App extends React.Component {
@@ -36,7 +40,20 @@ class App extends React.Component {
 
   render(props) {
     return (
-      <div>
+      <span className="fullpage">
+      <div className="doggoinfo-main">
+        <DoggoInfo />
+      </div>
+      <div className="askabout-main">
+        <AskAbout />
+      </div>
+      <div className="doggoadvice-main">
+        <div className="doggoadvice-container">
+          <DoggoAdvice src="https://cdn.images.express.co.uk/img/dynamic/130/590x/17f29pets3-489698.jpg" num={0}/>
+          <DoggoAdvice src="https://cdn2-www.dogtime.com/assets/uploads/2016/04/kid-friendly-dog-breeds-1.jpg" num={1}/>
+        </div>
+      </div>
+      <div className="doggorow-main">
         <div className="title-thing-TEMP">More Doggos from the Wholesome Doggo Club</div>
         <div className="dogcard-container">
           <DoggoRow height={this.state.height} width={this.state.width} doggos={this.state.doggos.slice(0, Math.floor((this.state.width) / 298))} />
@@ -48,6 +65,8 @@ class App extends React.Component {
           <div className="filler"></div>
         </div>
       </div>
+      <BottomBar />
+      </span>
     )
   }
 }
