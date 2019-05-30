@@ -1,6 +1,7 @@
 import React from 'react';
 import DoggoCard from './DogLink.jsx';
 import Doggoverflow from './Doggoverflow.jsx';
+import '../css/DoggoRow.css';
 
 const DoggoRow = (props) => {
   return (

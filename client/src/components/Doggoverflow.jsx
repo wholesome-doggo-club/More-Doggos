@@ -1,5 +1,5 @@
 import React from 'react';
-
+import '../css/Doggoverflow.css';
 
 class DoggoOverflow extends React.Component {
   constructor(props) {
@@ -22,7 +22,7 @@ class DoggoOverflow extends React.Component {
     return (
       <div className="doggo-overflow-outer" onMouseEnter={this.handleHover} onMouseLeave={this.handleHover}>
       <div className="doggo-overflow-top" >
-        <img src="./files/paw.png" className="doggo-overflow-paw"></img>
+        <img src="https://s3-us-west-1.amazonaws.com/petfinder-doggos/files/paw.png" className="doggo-overflow-paw"></img>
         <div className="doggo-overflow-top-text">30 more doggos available</div>
       </div>
       <div className="doggo-overflow-bot">

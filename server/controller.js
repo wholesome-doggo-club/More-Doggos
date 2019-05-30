@@ -5,5 +5,10 @@ module.exports = {
 		db.getDoggos(8, (data) => {
 			res.send(data);
 		})
+	},
+	get2: (req, res) => {
+		db.getADoggo((data) => {
+			res.send(data);
+		})
 	}
 }

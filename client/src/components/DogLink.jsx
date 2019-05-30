@@ -1,5 +1,5 @@
 import React from 'react';
-
+import '../css/DogLink.css';
 
 class DogCard extends React.Component {
   constructor(props) {
@@ -47,10 +47,10 @@ class DogCard extends React.Component {
             <div>
               <img src={this.props.doggo.image} className="dogcard-image-round"></img>
               {!this.state.shareHover &&
-                <img src="./files/shareDefault.jpg" className="dogcard-share" onMouseOver={this.handleShareHover}></img>}
+                <img src="https://s3-us-west-1.amazonaws.com/petfinder-doggos/files/shareDefault.jpg" className="dogcard-share" onMouseOver={this.handleShareHover}></img>}
 
               {this.state.shareHover &&
-                <img src="./files/shareHover.jpg" className="dogcard-share" onMouseLeave={this.handleShareHover} onClick={this.handleShareClick}></img>}
+                <img src="https://s3-us-west-1.amazonaws.com/petfinder-doggos/files/shareHover.jpg" className="dogcard-share" onMouseLeave={this.handleShareHover} onClick={this.handleShareClick}></img>}
             </div>
             {!this.state.shareClick &&
               <div className="dogcard-info">
@@ -68,9 +68,9 @@ class DogCard extends React.Component {
             <div>
               <img src={this.props.doggo.image} className="dogcard-image-round"></img>
               {!this.state.shareHover &&
-                <img src="./files/shareClose.png" className="dogcard-share" onMouseOver={this.handleShareHover}></img>}
+                <img src="https://s3-us-west-1.amazonaws.com/petfinder-doggos/files/shareClose.png" className="dogcard-share" onMouseOver={this.handleShareHover}></img>}
               {this.state.shareHover &&
-                <img src="./files/shareCloseHover.png" className="dogcard-share" onClick={this.handleShareClick} onMouseLeave={this.handleShareHover}></img>}
+                <img src="https://s3-us-west-1.amazonaws.com/petfinder-doggos/files/shareCloseHover.png" className="dogcard-share" onClick={this.handleShareClick} onMouseLeave={this.handleShareHover}></img>}
             </div>
             <div className="dogcard-info2">
               <div className="dogcard-info-share">Share {this.props.doggo.name}</div>

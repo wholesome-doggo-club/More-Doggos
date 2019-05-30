@@ -71,7 +71,7 @@
   /* border: 1px solid black; */
   height: 42px;
   width: 42px;
-  background-image: url(../files/shareHover.jpg);
+  /* background-image: url(../files/shareHover.jpg); */
   background-size: cover;
 }
 

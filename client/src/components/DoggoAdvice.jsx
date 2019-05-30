@@ -1,4 +1,5 @@
 import React from 'react';
+import '../css/DoggoAdvice.css';
 
 const DoggoAdvice = (props) => {
   const advice = ["Purina Dog Food Selector", "Tips for the first thirty days of dog adoption"];

@@ -8,13 +8,16 @@ import DoggoInfo from './DoggoInfo.jsx';
 // import Doggoverflow from './Doggoverflow.jsx';
 import $ from 'jquery';
 
+import '../css/Main.css';
+
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       height: 0,
       width: 0,
-      doggos: []
+      doggos: [],
+      doggos2: {}
     }
     this.updateDimensions = this.updateDimensions.bind(this);
   }
@@ -24,8 +27,12 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    $.get('/api', (doggos) => {
+    $.get('/api/doggos/doggo1', (doggos) => {
       this.setState({ doggos: doggos });
+    })
+    
+    $.get('./api/doggos/doggo2', (doggo) => {
+      this.setState({doggos2: doggo})
     })
     window.addEventListener("resize", this.updateDimensions);
   }
@@ -42,10 +49,10 @@ class App extends React.Component {
     return (
       <span className="fullpage">
       <div className="doggoinfo-main">
-        <DoggoInfo />
+        <DoggoInfo doggo={this.state.doggos2}/>
       </div>
       <div className="askabout-main">
-        <AskAbout />
+        <AskAbout doggo={this.state.doggos2}/>
       </div>
       <div className="doggoadvice-main">
         <div className="doggoadvice-container">
@@ -65,7 +72,7 @@ class App extends React.Component {
           <div className="filler"></div>
         </div>
       </div>
-      <BottomBar />
+      <BottomBar doggo={this.state.doggos2}/>
       </span>
     )
   }
